@@ -52,3 +52,4 @@ export default tseslint.config({
   },
 })
 ```
+# wewantwaste-frontend-challenge
