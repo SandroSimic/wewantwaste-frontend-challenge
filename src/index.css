@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --color-primary: #2ecc71;
+  --color-secondary: #2d3436;
+  --color-secondary-light: #b4b4b4;
+  --white: #ffffff;
+}
+
+body {
+  @apply font-sans;
+  background-color: #121212;
+}
+
+@layer components {
+  .card {
+    @apply bg-secondary p-5 rounded-xl transition-all duration-200 cursor-pointer outline-primary text-white font-medium shadow-lg transform;
+  }
+
+  .card:hover {
+    @apply outline-2 outline-primary -translate-y-1;
+  }
+
+  .btn {
+    @apply bg-secondary transition-all duration-100 cursor-pointer outline-2 text-white font-medium py-2 px-4 rounded w-full mt-5;
+  }
+
+  .btn:hover {
+    @apply border-primary border-0 outline-2 outline-primary;
+  }
+
+  .selected {
+    @apply bg-primary text-white outline-0 font-bold;
+  }
+
+  .selected-card {
+    @apply outline-2 outline-primary -translate-y-1;
+  }
+
+  .continue-btn {
+    @apply bg-primary cursor-pointer text-white font-semibold py-2 px-4 rounded transition-all duration-200 w-full sm:w-[200px] transform;
+  }
+
+  .continue-btn:hover {
+    @apply scale-105;
+  }
+
+  .back-btn {
+    @apply bg-[#1E1E1E] cursor-pointer text-white font-semibold py-2 px-4 rounded transition-all duration-200 w-full sm:w-[100px] transform;
+  }
+
+  .back-btn:hover {
+    @apply scale-105;
+  }
+}
