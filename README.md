@@ -1,55 +1,44 @@
-# React + TypeScript + Vite
+# Wewantwaste Frontend Coding Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧠 My Approach
 
-Currently, two official plugins are available:
+The original version (blue theme) was visually clean and functional — it got the job done.  
+However, I saw an opportunity to enhance the user experience by:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Displaying more useful information at a glance (like transport/per tonne cost and restrictions)
+- Making selected skips stand out more clearly
+- Adding a visual "language" to reinforce what's allowed (using icons and color indicators)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The green redesign isn’t just about color. Here’s what changed and why:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- ✅ **More structured information**: Pricing, availability, and hire period are clearly separated
+- ✅ **Better selection feedback**: The selected card visually “pops” with an outline and green “Selected” button
+- ✅ **Eco-aligned color palette**: The vibrant green fits the theme of waste management and sustainability
+- ✅ **Accessibility**: Statuses like “Not Allowed On The Road” are clearly marked with warnings/icons
+- ✅ **Responsive layout**: All components adapt cleanly to mobile, tablet, and desktop
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# wewantwaste-frontend-challenge
+## 💻 Tech Stack
+
+- **React** (Vite)
+- **TypeScript**
+- **Tailwind CSS** with custom theming
+- **react-icons** for status and UI icons
+- **Custom CSS classes** for reusable components
+
+## 📱 Features
+
+- Dynamic skip data from live API
+- Click-to-select skip cards with clear visual feedback
+- Responsive footer that updates based on selection
+- Conditional rendering for transport/per tonne costs
+- Full mobile/tablet/desktop support
+
+## 🚀 How to Run
+
+```bash
+npm install
+npm run dev
+
