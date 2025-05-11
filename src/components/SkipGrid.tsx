@@ -24,7 +24,7 @@ function SkipGrid({
           setLoading(false);
         }, 1000);
       } catch (err) {
-        console.error("Failed to fetch skips:", err);
+        console.error("Failed to fetch skips", err);
         setLoading(false);
       }
     };
